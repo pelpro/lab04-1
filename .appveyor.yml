@@ -6,4 +6,3 @@ shallow_clone: true
 
 build_script:
     - cmake .
-    - make
