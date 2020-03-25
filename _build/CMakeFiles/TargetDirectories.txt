@@ -1,0 +1,7 @@
+/home/dimka/Desktop/папка тупого задрота 8 сем/ak/hw/lab03/_build/CMakeFiles/install/strip.dir
+/home/dimka/Desktop/папка тупого задрота 8 сем/ak/hw/lab03/_build/CMakeFiles/edit_cache.dir
+/home/dimka/Desktop/папка тупого задрота 8 сем/ak/hw/lab03/_build/CMakeFiles/print.dir
+/home/dimka/Desktop/папка тупого задрота 8 сем/ak/hw/lab03/_build/CMakeFiles/list_install_components.dir
+/home/dimka/Desktop/папка тупого задрота 8 сем/ak/hw/lab03/_build/CMakeFiles/install/local.dir
+/home/dimka/Desktop/папка тупого задрота 8 сем/ak/hw/lab03/_build/CMakeFiles/rebuild_cache.dir
+/home/dimka/Desktop/папка тупого задрота 8 сем/ak/hw/lab03/_build/CMakeFiles/install.dir
