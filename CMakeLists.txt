@@ -23,7 +23,7 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/solver_lib
 #################
 # Эта часть компилирует все прилажения
 # Нам не важно в каком порядке
-file(GLOB EXE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*app*")
+file(GLOB EXE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*application")
 foreach(EXE_NAME ${EXE_SOURCES})
 	add_subdirectory(${EXE_NAME} ${EXE_NAME})
 endforeach(EXE_NAME ${EXE_SOURCES})
