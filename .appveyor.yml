@@ -1,0 +1,9 @@
+image: Visual Studio 2015
+
+
+clone_folder: c:\projects\my-prj 
+shallow_clone: true  
+
+build_script:
+    - cmake .
+    - make
