@@ -10,9 +10,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(equation equation.cpp)
 
 # Ужасно не удобно что хедеры не в одной дириктории((
+# В лабе 4 это стрельнуло( 
 include_directories(
-	${CMAKE_SOURCE_DIR}/../formatter_ex_lib
-	${CMAKE_SOURCE_DIR}/../solver_lib
+	${CMAKE_SOURCE_DIR}/formatter_ex_lib
+	${CMAKE_SOURCE_DIR}/solver_lib
 	)
 
 # Тут мне стало грустно(
@@ -25,8 +26,8 @@ include_directories(
 # Оставлю так, если кто-то знает как сделать лучше,
 # Пишите - nevstruev.dmitriy@mail.ru - будет большое спасибо)
 target_link_libraries(equation 
-	${CMAKE_SOURCE_DIR}/../formatter_ex_lib/libformatter_ex.a
-	${CMAKE_SOURCE_DIR}/../formatter_lib/libformatter.a
-	${CMAKE_SOURCE_DIR}/../solver_lib/libsolver.a
+	${CMAKE_SOURCE_DIR}/formatter_ex_lib/libformatter_ex.a
+	${CMAKE_SOURCE_DIR}/formatter_lib/libformatter.a
+	${CMAKE_SOURCE_DIR}/solver_lib/libsolver.a
 	)
 

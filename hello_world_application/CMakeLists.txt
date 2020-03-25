@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(hello_world hello_world.cpp)
 
-include_directories(${CMAKE_SOURCE_DIR}/../formatter_ex_lib)
+include_directories(${CMAKE_SOURCE_DIR}/formatter_ex_lib)
 
 # Тут мне стало грустно(
 # По идее я прилинковал formatter к formatter_ex,
@@ -21,6 +21,6 @@ include_directories(${CMAKE_SOURCE_DIR}/../formatter_ex_lib)
 # Оставлю так, если кто-то знает как сделать лучше,
 # Пишите - nevstruev.dmitriy@mail.ru - будет большое спасибо)
 target_link_libraries(hello_world 
-	${CMAKE_SOURCE_DIR}/../formatter_ex_lib/libformatter_ex.a
-	${CMAKE_SOURCE_DIR}/../formatter_lib/libformatter.a
+	${CMAKE_SOURCE_DIR}/formatter_ex_lib/libformatter_ex.a
+	${CMAKE_SOURCE_DIR}/formatter_lib/libformatter.a
 	)
