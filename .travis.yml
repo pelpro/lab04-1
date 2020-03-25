@@ -1,0 +1,14 @@
+language: cpp
+
+script:
+        - cmake formatter_lib
+        - cmake formatter_ex_lib
+        - cmake hello_world_application
+        - cmake solver_lib
+        - cmake solver_application
+addons:
+        apt:
+                packages:
+                        - cmake
+                        - cmake-data
+
