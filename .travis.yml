@@ -1,4 +1,6 @@
-language: cpp
+language: 
+        - gcc
+        - clang
 
 script:
         - cmake .
