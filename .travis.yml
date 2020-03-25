@@ -1,11 +1,8 @@
 language: cpp
 
 script:
-        - cd formatter_lib && cmake formatter_lib
-        - cd formatter_ex_lib && cmake formatter_ex_lib
-        - cd hello_world_application && cmake hello_world_application
-        - cd solver_lib && cmake solver_lib
-        - cd solver_application && cmake solver_application
+        - cmake .
+        - make
 addons:
         apt:
                 packages:
