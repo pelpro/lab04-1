@@ -21,17 +21,20 @@ $ open https://travis-ci.org
 
 ## Tutorial
 
+Переменные
 ```ShellSession
 $ export GITHUB_USERNAME=<имя_пользователя>
 $ export GITHUB_TOKEN=<полученный_токен>
 ```
 
+рабочая папка
 ```ShellSession
 $ cd ${GITHUB_USERNAME}/workspace
 $ pushd .
 $ source scripts/activate
 ```
 
+устанавливаем утелиты rvm
 ```ShellSession
 $ \curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
 $ echo "source $HOME/.rvm/scripts/rvm" >> scripts/activate
@@ -42,6 +45,7 @@ $ rvm use 2.4.2 --default
 $ gem install travis
 ```
 
+новый реп
 ```ShellSession
 $ git clone https://github.com/${GITHUB_USERNAME}/lab03 projects/lab04
 $ cd projects/lab04
@@ -49,12 +53,14 @@ $ git remote remove origin
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab04
 ```
 
+добавляем конфиг для travis - устанавливаем язык
 ```ShellSession
 $ cat > .travis.yml <<EOF
 language: cpp
 EOF
 ```
 
+прописываем сборку и компиляцию
 ```ShellSession
 $ cat >> .travis.yml <<EOF
 
@@ -65,6 +71,7 @@ script:
 EOF
 ```
 
+необходимые пакеты
 ```ShellSession
 $ cat >> .travis.yml <<EOF
 
@@ -78,18 +85,24 @@ addons:
 EOF
 ```
 
+входим в travis
 ```ShellSession
 $ travis login --github-token ${GITHUB_TOKEN}
+Successfully logged in as nevstruevdmitriy!
 ```
 
 ```ShellSession
 $ travis lint
+Hooray, .travis.yml looks valid :)
+
 ```
 
+добавяем значёк
 ```ShellSession
 $ ex -sc '1i|<фрагмент_вставки_значка>' -cx README.md
 ```
 
+комитим изменение
 ```ShellSession
 $ git add .travis.yml
 $ git add README.md
@@ -97,13 +110,21 @@ $ git commit -m"added CI"
 $ git push origin master
 ```
 
+смотрим на вывод travis
 ```ShellSession
 $ travis lint
+Hooray, .travis.yml looks valid :)
 $ travis accounts
+nevstruevdmitriy (Nevstruev Dmitriy): subscribed, 35 repositories
+robocupmipt (RoboCup MIPT): subscribed, 12 repositories
 $ travis sync
+synchronizing: . done
 $ travis repos
+... много репощиториев...
 $ travis enable
+nevstruevdmitriy/lab04: enabled :)
 $ travis whatsup
+nothing to show
 $ travis branches
 $ travis history
 $ travis show
